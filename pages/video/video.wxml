@@ -1,0 +1,9 @@
+<!--pages/video/video.wxml-->
+<view class="container">
+<!-- 视频 -->
+<video src="https://jvod.300hu.com/vod/product/a00f23fd-b363-48f5-9442-9c91a72c61c2/2272328452634a0d940ed53a6acaf897.mp4" id="myVideo" duration="60" controls="true" autoplay loop danmu-btn enable-danmu danmu-list="{{danmuList}}"></video>
+<form bindsubmit="formSubmit">
+<input type='text' placeholder='请输入视频id' name="video_id"></input>
+ <button style='margin-top:20px;' formType="submit">确定</button>
+ </form>
+</view>

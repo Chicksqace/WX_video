@@ -1,0 +1,63 @@
+/* 导航 */
+.nav{
+  display: flex; 
+}
+.navItem{
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align:center;
+  display: flex;
+  font-weight: bold;
+}
+.navItem:nth-child(1){
+  color: orange;
+}
+.navItem:nth-child(1)::after{
+  content: '——';
+  position: absolute;
+  top: 30rpx;
+  left: 20rpx;
+}
+/* 海报 */
+.swiper-item{
+  margin-top: 25rpx;
+}
+/* 猜你会追 */
+.page-section-spacing{
+  margin-top: 25rpx;
+}
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 30rpx;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 10%;
+  height: 30rpx;
+}
+.scroll-view-item_H image{
+  display: flex;
+}
+.scrollImageItem{
+  margin-right: 20rpx;
+  display: flex;
+}
+.scrollText{
+  display: flex;
+}
+.scrollText text{
+  font-size: 40rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* 重磅热播 */
+.lastImage image{
+  width: 45%;
+  height: 45%;
+  float: left;
+  margin: 20rpx;
+}

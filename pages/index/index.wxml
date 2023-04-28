@@ -1,0 +1,46 @@
+<view>
+<!-- 导航 -->
+  <view class="nav">
+    <block wx:for="{{navItems}}" wx:key="id">
+      <view class="navItem" >
+        {{item.title}}
+      </view>
+    </block>  
+    </view>
+    <!-- searchBar -->
+    <searchBar/>
+    <!-- 轮播 -->
+    <swiper indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}">
+    <block wx:for="{{swiper.background}}" wx:key="*this">
+      <swiper-item>
+        <view class="swiper-item">
+          <image src="{{swiper.imgPath[index]}}" alt="" mode="widthFix" />
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 猜你会追 -->
+  <view class="page-section">
+      <view class="page-section-title">
+        <text style="font-weight: bold; margin-top: 20px;display: inline-block;">猜你会追</text>
+      </view>
+      <view class="page-section-spacing">
+        <scroll-view class="scroll-view_H" scroll-x="true"bindscroll="scroll" >
+          <view class="scroll-view-item_H" wx:for="{{scrollItem}}" wx:key="index" style="width: 100%" >
+            <image class="scrollImageItem" src="{{scrollItem[index].imgPath}}" mode="widthFix"  bindtap="gotoVideo"/>
+            <view class="scrollText" wx:if="{{show}}">
+              <text>{{scrollItem[index].name}}</text>
+              <text>{{scrollItem[index].text}}</text>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <!-- 重磅热播 -->
+    <view class="last">
+      <text style="font-weight: bold; margin-top: 20px;display: inline-block;">重磅热播</text>
+      <view class="lastImage" wx:for="{{scrollItem}}" wx:key="index" style="width: 100%" >
+            <image class="image" src="{{scrollItem[index].imgPath}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,2 @@
+<!--pages/videotest/videotest.wxml-->
+<video src="https://jvod.300hu.com/vod/product/a00f23fd-b363-48f5-9442-9c91a72c61c2/2272328452634a0d940ed53a6acaf897.mp4" id="myVideo" duration="60" controls="true" autoplay loop danmu-btn enable-danmu danmu-list="{{danmuList}}" style="width: 100%;"></video>
